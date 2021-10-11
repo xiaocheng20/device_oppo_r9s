@@ -59,20 +59,17 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_BOARD_SUFFIX := _64
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/boot/custombootimg.mk
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlyprintk androidboot.selinux=permissive ramoops.mem_address=0x8ff00000 ramoops.mem_size=0x100000 ramoops.record_size=0x20000 ramoops.console_size=0x20000 ramoops.dump_oops=0
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlyprintk androidboot.selinux=permissive ramoops.mem_address=0x8ff00000 ramoops.mem_size=0x100000 ramoops.record_size=0x20000 ramoops.dump_oops=0
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_APPEND_DTB := true
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --kernel_offset 0x00008000
+# TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-#TARGET_KERNEL_SOURCE := kernel/oppo/r9s
-#TARGET_KERNEL_CONFIG := cyanogenmod_r9s_defconfig
-#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_SOURCE := kernel/oppo/r9s
+TARGET_KERNEL_CONFIG := r9s_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true

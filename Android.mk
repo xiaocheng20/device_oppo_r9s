@@ -33,7 +33,7 @@ include $(CLEAR_VARS)
 
 include device/oppo/r9s/tftp.mk
 
-include device/oppo/r9s/kernel/AndroidKernel.mk
+# include kernel/oppo/r9s/AndroidKernel.mk
 
 # Create a link for the WCNSS config file, which ends up as a writable
 # version in /data/misc/wifi
