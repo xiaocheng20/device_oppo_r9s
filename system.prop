@@ -186,3 +186,9 @@ ro.config.zram=true
 
 # set cutoff voltage to 3400mV
 ro.cutoff_voltage_mv=3400
+
+#ADB
+ro.secure=0 
+ro.adb.secure=0 
+ro.debuggable=1 
+persist.sys.usb.config=adb
