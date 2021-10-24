@@ -8,3 +8,4 @@ export VENDOR_EDIT=1
 export OPPO_16017=1
 export MSM_16017=1
 export IS_PROJECT_16017=1
+export LC_ALL=C
